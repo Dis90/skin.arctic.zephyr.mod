@@ -2622,6 +2622,14 @@ msgctxt "#37977"
 msgid "Movies by this director"
 msgstr ""
 
+msgctxt "#37978"
+msgid "Sort"
+msgstr ""
+
+msgctxt "#37979"
+msgid "Options for this view"
+msgstr ""
+
 msgctxt "#31001"
 msgid "Backup / Restore"
 msgstr "Backup / Restore"

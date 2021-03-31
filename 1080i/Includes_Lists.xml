@@ -217,6 +217,7 @@
         <param name="height" value="$PARAM[height]" default="349"/>
         <param name="focusposition" value="$PARAM[focusposition]" default="2"/>
         <param name="storageicon.backgroundlist" value="$PARAM[storageicon.backgroundlist]"/>
+        <param name="storageicon" value="$PARAM[storageicon]"/>
         <param name="width" value="$PARAM[width]" default="260"/>
         <param name="headerbottom" value="$PARAM[headerbottom]" default="710"/>
         <param name="listbottom" value="$PARAM[listbottom]" default="30"/>
@@ -385,6 +386,7 @@
                         <include content="DefExtendedInfoSetsContentWIP" condition="$PARAM[condition.issets]">
                             <param name="aspect" value="$PARAM[aspect]" default="scale"/>
                             <param name="fallbackpicture" value="$PARAM[fallbackpicture]"/>
+                            <param name="storageicon" value="$PARAM[storageicon]"/>
                         </include>
                     </control>
                 </itemlayout>
@@ -413,6 +415,7 @@
                             <param name="labeltwovisible" value="$PARAM[labeltwovisible]"/>
                             <param name="labeltwobottom" value="$PARAM[labeltwobottom]"/>
                             <param name="labeltwoleft" value="$PARAM[labeltwoleft]"/>
+                            <param name="storageicon" value="$PARAM[storageicon]"/>
                         </include>
                     </control>
                 </focusedlayout>

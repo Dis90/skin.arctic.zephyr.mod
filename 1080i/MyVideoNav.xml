@@ -176,6 +176,16 @@
                     <onclick>Skin.ToggleSetting(NotShowClearart514)</onclick>
                     <visible>Control.IsVisible(514)</visible>
                 </control>
+                
+                
+                <control type="radiobutton" id="902555">
+                    <include>DefContextButtonGradient</include>
+                    <align>left</align>
+                    <label>extended.info.only.local</label>
+                    <selected>Skin.HasSetting(extended.info.only.local)</selected>
+                    <onclick>Skin.ToggleSetting(extended.info.only.local)</onclick>
+                </control>
+                
                 <control type="radiobutton" id="9027" description="Liste anzeigen">
                     <include>DefContextButtonGradient</include>
                     <align>left</align>

@@ -897,11 +897,37 @@
                         <param name="visi" value="String.IsEmpty(Window.Property(moviecontent)) + !Skin.HasSetting(HideActorImages)"/>
                         <param name="visible.layouts" value="Control.HasFocus(50) | Control.HasFocus(6) | Window.IsVisible(DialogBusy.xml)"/>
                         <param name="storageicon.backgroundlist" value="false"/>
+                        <param name="storageicon" value="false"/>
                         <param name="animation" value="Animation.cast.test"/>
                         <param name="controlid" value="50"/>
                         <param name="fallbackpicture" value="defaultmovie.png"/>
                         <param name="listleft" value="-840"/>
                         <param name="labeltwovisible" value="true"/>
+                    </include>
+                    
+                    <!-- By Director -->
+                    <include content="VideoListCast" condition="String.IsEqual(ListItem.DBType,movie) + !String.IsEqual(ListItem.DBType,set)">
+                        <param name="arrowleft" value="-598"/>
+                        <param name="arrowtop" value="342"/>
+                        <param name="arrowright" value="155"/>                        
+                        <param name="condition.includecontent" value="true"/>                        
+                        <param name="fallbackpicture" value="pbtmdb.png"/>
+                        <param name="visi" value="String.IsEqual(Window.Property(moviecontent),7)"/>
+                        <param name="animation" value="Animation.cast"/>
+                        <param name="controlid" value="9506"/>
+                        <param name="ContentToLoad" value="$VAR[Def_Director_List]"/>
+                        <param name="visible.layouts" value="Control.HasFocus(9506) | Control.HasFocus(6) | Window.IsVisible(DialogBusy.xml)"/>
+                        <param name="storageicon.backgroundlist" value="true"/>
+                        <param name="onclick1" value="RunScript(script.embuary.info,call=movie,query=$INFO[Container(9506).ListItem.Label]))"/>
+                        <param name="listleft" value="-840"/>
+                        <param name="labeltwovisible" value="true"/>
+                        <param name="poster" value="true" />
+                        <param name="thumb" value="false" />
+                    </include>
+                    <include content="ListInfoUpdating">
+                        <param name="visi" value="String.IsEqual(Window.Property(moviecontent),7)"/>
+                        <param name="controlid" value="9506"/>
+                        <param name="alignleft" value="450"/>
                     </include>
     
                     <!-- Similar Movies -->
@@ -914,13 +940,15 @@
                         <param name="visi" value="String.IsEqual(Window.Property(moviecontent),2)"/>
                         <param name="animation" value="Animation.cast"/>
                         <param name="controlid" value="9502"/>
-                        <param name="ContentToLoad" value="$VAR[ContentVideoSimilar]"/>
+                        <param name="ContentToLoad" value="$VAR[Def_Similar_List]"/>
                         <param name="visible.layouts" value="Control.HasFocus(9502) | Control.HasFocus(6) | Window.IsVisible(DialogBusy.xml)"/>
                         <param name="storageicon.backgroundlist" value="true"/>
                         <param name="onclick1" value="RunScript(script.embuary.info,call=movie,query=$INFO[Container(9502).ListItem.Label]))"/>
                         <param name="onup1" value="RunScript(script.embuary.info,call=movie,query=$INFO[Container(9502).ListItem.Label]))"/>
                         <param name="listleft" value="-840"/>
                         <param name="labeltwovisible" value="true"/>
+                        <param name="poster" value="true" />
+                        <param name="thumb" value="false" />
                     </include>
     
                     <!-- Similar TV Shows -->
@@ -933,13 +961,15 @@
                         <param name="visi" value="String.IsEqual(Window.Property(moviecontent),2)"/>
                         <param name="animation" value="Animation.cast"/>
                         <param name="controlid" value="9502"/>
-                        <param name="ContentToLoad" value="$VAR[ContentVideoSimilar]"/>
+                        <param name="ContentToLoad" value="$VAR[Def_Similar_List]"/>
                         <param name="visible.layouts" value="Control.HasFocus(9502) | Control.HasFocus(6) | Window.IsVisible(DialogBusy.xml)"/>
                         <param name="storageicon.backgroundlist" value="true"/>
                         <param name="onclick1" value="RunScript(script.embuary.info,call=tv,query=$INFO[Container(9502).ListItem.Label]))"/>
                         <param name="onup1" value="RunScript(script.embuary.info,call=tv,query=$INFO[Container(9502).ListItem.Label]))"/>
                         <param name="listleft" value="-840"/>
                         <param name="labeltwovisible" value="true"/>
+                        <param name="poster" value="true" />
+                        <param name="thumb" value="false" />
                     </include>
                     <include content="ListInfoUpdating">
                         <param name="visi" value="String.IsEqual(Window.Property(moviecontent),2)"/>
@@ -957,13 +987,15 @@
                         <param name="visi" value="String.IsEqual(Window.Property(moviecontent),3)"/>
                         <param name="animation" value="Animation.cast"/>
                         <param name="controlid" value="9503"/>
-                        <param name="ContentToLoad" value="$VAR[ContentVideoStudio]"/>
+                        <param name="ContentToLoad" value="$VAR[Def_Studio_List]"/>
                         <param name="visible.layouts" value="Control.HasFocus(9503) | Control.HasFocus(6) | Window.IsVisible(DialogBusy.xml)"/>
                         <param name="storageicon.backgroundlist" value="true"/>
                         <param name="onclick1" value="RunScript(script.embuary.info,call=movie,query=$INFO[Container(9503).ListItem.Label]))"/>
                         <param name="onup1" value="RunScript(script.embuary.info,call=movie,query=$INFO[Container(9503).ListItem.Label]))"/>
                         <param name="listleft" value="-840"/>
                         <param name="labeltwovisible" value="true"/>
+                        <param name="poster" value="true" />
+                        <param name="thumb" value="false" />
                     </include>
                     <include content="ListInfoUpdating">
                         <param name="visi" value="String.IsEqual(Window.Property(moviecontent),3)"/>
